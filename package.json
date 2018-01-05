@@ -1,0 +1,16 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts":{
+    "build":"thrift -r --gen js:node calculate.thrift",
+    "server":"node server.js",
+    "client":"node client.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mocha": "^4.1.0",
+    "thrift": "^0.10.0"
+  }
+}
