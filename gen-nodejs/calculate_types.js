@@ -184,3 +184,4 @@ InvalidOperation.prototype.write = function(output) {
   return;
 };
 
+ttypes.VERSION = '1.0.0';

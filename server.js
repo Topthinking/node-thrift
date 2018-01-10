@@ -24,7 +24,7 @@ const serverObj = {
                 var o = new ttypes.InvalidOperation()
                 o.whatOp = work.op
                 o.why = 'can not divide by 0'
-                result(0)
+                result(o)
                 return
             }
             val = work.num1 / work.num2

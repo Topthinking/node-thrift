@@ -1,3 +1,6 @@
+
+const string VERSION = "1.0.0"  
+
 enum Operation {
     ADD = 5,
     SUBTRACT = 9,

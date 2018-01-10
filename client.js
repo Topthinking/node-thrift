@@ -30,6 +30,12 @@ const work1 = new ttypes.Work({
     op: ttypes.Operation.SUBTRACT
 })
 
+const work2 = new ttypes.Work({
+    num1: 10,
+    num2: 0,
+    op: ttypes.Operation.DIVIDE
+})
+
 client.ping()
 
 client.add(3, 4, function (err, res) { 
@@ -46,6 +52,15 @@ client.calculate(1, work1, (err, res) => {
         console.log(err)
     } else { 
         console.log('10 - 4 = '+ res)
+    }
+    connection.end()
+})
+
+client.calculate(1, work2, (err, res) => { 
+    if (err) {
+        console.log(err)
+    } else { 
+        console.log('10 / 0 = '+ res)
     }
     connection.end()
 })
